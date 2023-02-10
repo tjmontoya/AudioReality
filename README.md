@@ -6,8 +6,8 @@ Enabling blind people to enjoy 'sightseeing' in their unique way by providing th
 
 The following are steps to run AudioReality locally, through an android simulator. 
 
-1. Download (flutter)[].
-2. Download [android studio]() for android emulator.
+1. Download [flutter](https://docs.flutter.dev/get-started/install).
+2. Download [android studio](https://developer.android.com/studio) for android emulator.
 3. Clone repository.
 4. Open terminal, and navigate to flutter root directory: `../AudioReality/flutter_files/geolocation_test/`, then execute `flutter run`. On android emulator, flutter app should automatically be built. There will an app in the homepage called 'geolocation_test'.
 5. Open new terminal navigate to python root directory: `../AudioReality/python_files/`, and run `export REPLICATE_API_TOKEN="ac37eca7ce769850a8c17bbbc9ab8e8e8658c9ba"`. This is the necessary API key. Once done, run 'python3 app.py'.
