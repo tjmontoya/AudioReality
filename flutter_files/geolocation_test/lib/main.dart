@@ -33,6 +33,9 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+  String? url;
+  var data;
+  String queryText = "Description";
 
   Position? _position;
 
@@ -46,9 +49,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<Position> _determinePosition() async {
     LocationPermission permission;
     permission = await Geolocator.checkPermission();
-    if(permission == LocationPermission.denied) {
+    if (permission == LocationPermission.denied) {
       permission = await Geolocator.requestPermission();
-      if(permission == LocationPermission.denied) {
+      if (permission == LocationPermission.denied) {
         return Future.error('Location Permissions are denied');
       }
     }
@@ -57,26 +60,23 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    String? url;
-    var data;
-    String queryText = "Description";
-
     return Scaffold(
       appBar: AppBar(
-        title: Text("Geolocation App"),
+        title: const Text("Audio Reality"),
       ),
-      body: Center(
-        child: Text(queryText)
-      ),
+      body: Center(child: Text(queryText)),
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {
+        onPressed: () async {
           _getCurrentLocation();
-          url = 'http://10.0.2.2:5000/api?Query=${_position?.latitude ?? ''}/${_position?.longitude ?? ''}';
-          data = getData(url);
+          url =
+              'http://127.0.0.1:5000/api?Query=${_position?.latitude ?? ''}/${_position?.longitude ?? ''}';
+          var parsedUrl = Uri.parse(url.toString());
+          debugPrint('$parsedUrl');
+          data = await getData(parsedUrl).timeout(const Duration(minutes: 5));
           var decodedData = jsonDecode(data);
           setState(() {
-          queryText = decodedData['Query'];
-         });
+            queryText = decodedData.toString();
+          });
         },
         tooltip: "Get location data",
         icon: const Icon(Icons.location_searching),
