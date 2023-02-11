@@ -2,6 +2,13 @@
 
 Enabling blind people to enjoy 'sightseeing' in their unique way by providing them with literary-pleasing descriptions of their surroundings. AudioReality is a mobile app that uses user location data to output descriptions of user's surroundings. Currently, backend logic exists, but front end features like text-to-speech are not yet implemented. We will discuss next steps at the bottom of this README.
 
+## Overview of fils:
+
+1. `flutter_files` contain our frontend files.
+2. `python_files` contain our backend files.
+3/ Audioreality_slides is our pitch deck.
+
+
 ## Getting started
 
 The following are steps to run AudioReality locally, through an android simulator. 
