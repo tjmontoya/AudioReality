@@ -70,10 +70,12 @@ class _MyHomePageState extends State<MyHomePage> {
           _getCurrentLocation();
           url =
               'http://127.0.0.1:5000/api?Query=${_position?.latitude ?? ''}/${_position?.longitude ?? ''}';
-          var parsedUrl = Uri.parse(url.toString());
-          debugPrint('$parsedUrl');
+          var parsedUrl = Uri.parse(url != null ? url.toString() : "");
+          debugPrint('Query: $parsedUrl');
           data = await getData(parsedUrl).timeout(const Duration(minutes: 5));
+          debugPrint('Data retrieved...');
           var decodedData = jsonDecode(data);
+          debugPrint('Data decoded...');
           setState(() {
             queryText = decodedData.toString();
           });
