@@ -11,14 +11,15 @@ Enabling blind people to enjoy 'sightseeing' in their unique way by providing th
 
 ## Getting started
 
-The following are steps to run AudioReality locally, through an android simulator. 
+The following are steps to run AudioReality locally, through an android/ios simulator. 
 
 1. Download [flutter](https://docs.flutter.dev/get-started/install).
-2. Download [android studio](https://developer.android.com/studio) for android emulator.
+2. Download [android studio](https://developer.android.com/studio) for android emulator. For macbook users who would prefer ios emulator,download xcode by opening terminal and running `xcode-select —install`.
 3. Clone repository.
-4. Open terminal, and navigate to flutter root directory: `../AudioReality/flutter_files/geolocation_test/`, then execute `flutter run`. On android emulator, flutter app should automatically be built. There will an app in the homepage called 'geolocation_test'.
+4. Open terminal, and navigate to flutter root directory: `../AudioReality/flutter_files/geolocation_test/`, then execute `flutter run`. On emulator, flutter app should subsequently be built. There will an app in the homepage called 'geolocation_test'.
 5. Open new terminal navigate to python root directory: `../AudioReality/python_files/`, and run `export REPLICATE_API_TOKEN="ac37eca7ce769850a8c17bbbc9ab8e8e8658c9ba"`. This is the necessary API key. Once done, run 'python3 app.py'.
-7. On emulator, press button "Get Location Data". After loading, app will output surrounding location description.
+6. On emulator, press button "Get Location Data". After loading, app will output surrounding location description.
+7. (Optional) xcode contains a change laptop location feature, which can be user to manually test for desriptions for different locations. Open macbook settings & select "set location". From there, type in the lattitud and longitude of desired location, then on AudioReality flutter app, click on "Get Location Data" button to output description of new location.
 
 ## Tech Stack
 
