@@ -6,7 +6,7 @@ Enabling blind people to enjoy 'sightseeing' in their unique way by providing th
 
 1. `flutter_files` contain our frontend files.
 2. `python_files` contain our backend files.
-3/ Audioreality_slides is our pitch deck.
+3. Audioreality_slides is our pitch deck.
 
 
 ## Getting started
@@ -32,3 +32,12 @@ The following are steps to run AudioReality locally, through an android/ios simu
 2. Google's Streetview API.
 3. Clip-interrogator API.
 4. Open AI's GPT API, Davinci.
+
+## What's next for AudioReality?
+
+1. Conduct optimization on GPT's queries, so erroneous descriptions of locations will be reduced. Also conduct optimization to reduce loading time.
+2. Create an app that is fully text-to-speech, so blind users can use the app without needing the help of caretakers to navigate its functions.
+3. Enable profile creation, so users can tailor the output of descriptions to their profile settings. For instance, ask for age, so we can query GPT to give descriptions that consist of less complicated words to children. Alternatively, create options for styles descriptions. For instance, "Victorian era poems" style, etc.
+4. Create a database of poems. We hope to collaborate with poets in Singapore and ask for copyright access, so we can integrate poems from poems.com.sg into our app. From there, we can programme our app to read poems about specific locations in Singapore if user happens to be close by.
+5. Automate. Currently, user needs to click "get location" for the app to output a description of the location. We hope to automate this process, so users can simply wear their earphones, walk around Singapore, and have poems / beautiful descriptions played to them as and when something relevant comes into their vicinity.
+6. Enable photo-taking. Currently, we provide location descriptions with google streetview. This works, but we'd like to improve upon it since google streeview may not necessarily reflect what the location currently looks like. We hope to enable photo-taking, or even video, so users can get the most current description of their surroudings.
