@@ -6,7 +6,7 @@ Enabling blind people to enjoy 'sightseeing' in their unique way by providing th
 
 1. `flutter_files` contain our frontend files.
 2. `python_files` contain our backend files.
-3. Audioreality_slides is our pitch deck.
+3. `Audioreality_slides.pdf` is our pitch deck.
 
 
 ## Getting started
